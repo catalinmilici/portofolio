@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    color: #fff;
+    background: #111215;
+    line-height: 1.5;
+    font-weight: 400;
+    overflow-x: hidden !important;
+    font-family: "Poppins", sans-serif;
+    padding-top: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59);
+    border-radius: 10px;
+}
+
+:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+figure,
+p {
+    margin-bottom: 0;
+}
+
+.section-header {
+    h4 {
+        font-weight: 300;
+        font-size: 17px;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+
+        font-size: 48px;
+        font-weight: 500;
+    }
+}
+
+.navbar {
+    .navbar-nav {
+        .nav-link {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            padding: 15px 7px;
+            margin: 10px 15px;
+        }
+    }
+}
+
+.mci-person {
+    min-height: 100vh;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    top: -100px;
+
+    &::after {
+        content: "";
+        width: 140%;
+        background: rgba(255, 255, 255, 0.01);
+        height: 100%;
+        -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        transform: rotate(15deg);
+        position: absolute;
+        top: -40%;
+        left: -20%;
+        z-index: -1;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #word {
+        background: -webkit-gradient(linear,
+                left top,
+                right top,
+                from(#12c2e9),
+                color-stop(#c471ed),
+                to(#f64f59));
+        background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+        background: -o-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    figure {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        z-index: 2;
+
+        img {
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 50%;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        &::after {
+            content: "";
+            background: -webkit-gradient(linear, right top, left top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
+            background: -webkit-linear-gradient(right, #12c2e9, #c471ed, #f64f59);
+            background: -o-linear-gradient(right, #12c2e9, #c471ed, #f64f59);
+            background: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+}
+
+.statistics {
+    padding-bottom: 50px;
+
+    .stats {
+        display: flex;
+        align-items: center;
+        width: 240px;
+
+        .count {
+            font-size: 50px;
+            font-weight: 400;
+            margin-right: 20px;
+        }
+
+        .desc {
+            color: #a4a7b1;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 2;
+        }
+    }
+}
+
+.mail-me {
+    span {
+        color: #a4a7b1;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 2
+    }
+
+    a {
+        font-size: 14px;
+        margin-top: 5px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        line-height: 65px;
+        text-align: center;
+        border-radius: 5px;
+        background: -webkit-linear-gradient(323.53deg, #18191d 6.69%, rgba(4, 4, 5, 0.1) 85.43%);
+        background: -o-linear-gradient(323.53deg, #18191d 6.69%, rgba(4, 4, 5, 0.1) 85.43%);
+        background: linear-gradient(126.47deg, #18191d 6.69%, rgba(4, 4, 5, 0.1) 85.43%);
+        font-size: 30px;
+
+    }
+}
+
+.linearGradientText {
+    background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+    background: -o-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.line {
+    position: absolute;
+    height: 1px;
+    width: 65%;
+    background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+    background: -o-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+.mci-services {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    position: relative;
+
+    .box {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding: 60px 40px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.01);
+
+        .icon {
+            width: 110px;
+            height: 80px;
+            font-size: 40px;
+
+            margin-left: 10px;
+        }
+    }
+
+    .content {
+
+        h6 {
+            line-height: 1.8;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #a4a7b1;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 2;
+            margin: 0;
+        }
+    }
+}

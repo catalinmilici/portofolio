@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+body {
+  color: #fff;
+  background: #111215;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden !important;
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+figure, p {
+  margin-bottom: 0;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 7px;
+  margin: 10px 15px;
+}
+
+.mci-person {
+  min-height: 100vh;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  top: -100px;
+}
+.mci-person::after {
+  content: "";
+  width: 140%;
+  background: rgba(255, 255, 255, 0.01);
+  height: 100%;
+  transform: rotate(15deg);
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  z-index: -1;
+}
+.mci-person h1 {
+  font-size: 35px;
+}
+.mci-person #word {
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mci-person figure {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.mci-person figure img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: 100%;
+  height: 100%;
+}
+.mci-person figure::after {
+  content: "";
+  background: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.statistics {
+  padding-bottom: 50px;
+}
+.statistics .stats {
+  display: flex;
+  align-items: center;
+  width: 240px;
+}
+.statistics .stats .count {
+  font-size: 50px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.statistics .stats .desc {
+  color: #a4a7b1;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.mail-me span {
+  color: #a4a7b1;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2;
+}
+.mail-me a {
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+.mail-me .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 65px;
+  text-align: center;
+  border-radius: 5px;
+  background: linear-gradient(126.47deg, #18191d 6.69%, rgba(4, 4, 5, 0.1) 85.43%);
+  font-size: 30px;
+}
+
+.linearGradientText {
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.line {
+  position: absolute;
+  height: 1px;
+  width: 65%;
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+.mci-services {
+  padding: 80px 0;
+}
+.mci-services h4 {
+  font-weight: 300;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-bottom: 10px;
+}
+.mci-services h2 {
+  font-size: 48px;
+  font-weight: 500;
+}
+.mci-services .box {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 60px 40px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.01);
+}
+.mci-services .box .icon {
+  width: 80px;
+  height: 100px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.mci-services .content {
+  padding-left: 30px;
+}
+.mci-services .content h6 {
+  line-height: 1.8;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.mci-services .content p {
+  color: #a4a7b1;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2;
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
