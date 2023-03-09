@@ -45,18 +45,29 @@ if (filterContainer) {
     });
 }
 
-const progressContainer = document.querySelector('.progress-container');
-
-// initial call
-setPercentage();
-
-function setPercentage() {
-  const percentage = progressContainer.getAttribute('data-percentage') + '%';
+//display fixed header after scroll x[px] height
+window.addEventListener('scroll', function () {
+ 
   
-  const progressEl = progressContainer.querySelector('.progress');
-  const percentageEl = progressContainer.querySelector('.percentage');
-  
-  progressEl.style.width = percentage;
-  percentageEl.innerText = percentage;
-  percentageEl.style.left = percentage;
+  const height = document.querySelector(".mci-person .container").clientHeight;
+  console.log(`height: ${height}`);
+   
+  var header = document.querySelector(".navbar");
+        header.classList.toggle("animation", window.scrollY > height);
+  header.classList.toggle("fixed-top", window.scrollY > height);
+  document.querySelector("body").classList.toggle("pt-5", window.scrollY > height);
+        
+    }
+)
+
+//hide menu on scroll down
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".navbar").style.top = "0";
+    } else {
+        document.querySelector(".navbar").style.top = "-105px";
+    }
+    prevScrollpos = currentScrollPos;
 }
