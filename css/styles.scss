@@ -7,7 +7,7 @@ body {
     font-weight: 400;
     overflow-x: hidden !important;
     font-family: "Poppins", sans-serif;
-    padding-top: 100px;
+    
 }
 
 h1,
@@ -79,6 +79,7 @@ p {
       }
   }
 .navbar {
+        transition: top 0.3s;
     .navbar-nav {
         .nav-link {
             color: #ffffff;
@@ -89,6 +90,10 @@ p {
             margin: 10px 15px;
         }
     }
+    &.animation{
+        background-color: #1B1D21;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    }
 }
 
 .mci-person {
@@ -97,6 +102,7 @@ p {
     position: relative;
     overflow: hidden;
     top: -100px;
+    display: inline-block;
 
     &::after {
         content: "";
@@ -346,11 +352,12 @@ p{
 .progress-container {
   box-shadow: 0 4px 5px rgb(0, 0, 0, 0.1);
   position: relative;
-  margin-top: 35px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   display: block;
   .title{
     position: absolute;
-    top: -30px;
+    top: -25px;
    
   }
 }
@@ -376,7 +383,7 @@ background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-s
 }
 
 .percentage {
-  background-color: #6F39B0;
+background: #1D1E21;
   border-radius: 5px;
   box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
   color: #fff;
@@ -392,7 +399,7 @@ background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-s
 }
 
 .percentage::after {
-  background-color: #6F39B0;
+background: #1D1E21;
   content: '';
   position: absolute;
   top: -5px;
@@ -402,4 +409,42 @@ background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-s
   width: 10px;
   z-index: -1;
 }
+}
+.contact-form{
+    padding-top: 80px;
+        padding-bottom: 120px;
+    input,
+    textarea{
+        width: 100%;
+            padding: 15px 0;
+            border: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
+            color: #fff;
+            border-radius: 0;
+            &:focus{
+                background: transparent;
+                    color: #fff;
+                    box-shadow: none;
+            }
+    }
+    button{
+            border: 1px solid #fff;
+                background: transparent;
+                color: #fff;
+                    padding: 15px 35px;
+                        font-size: 13px;
+                      
+                        -webkit-transition: all 0.4s;
+                        -o-transition: all 0.4s;
+                        transition: all 0.4s;
+        &:hover,
+        &:focus,
+        &:active{
+            background: #fff !important;
+                color: #333 !important;
+                outline-offset: -4px;
+                    outline: 2px solid #333;
+        }
+    }
 }
