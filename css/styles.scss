@@ -60,7 +60,24 @@ p {
         font-weight: 500;
     }
 }
+  .box {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding: 60px 40px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.01);
 
+      .icon {
+          width: 110px;
+          height: 80px;
+          font-size: 40px;
+
+          margin-left: 10px;
+      }
+  }
 .navbar {
     .navbar-nav {
         .nav-link {
@@ -223,24 +240,7 @@ p {
     padding-bottom: 120px;
     position: relative;
 
-    .box {
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 30px;
-        padding: 60px 40px;
-        border-radius: 5px;
-        background: rgba(255, 255, 255, 0.01);
-
-        .icon {
-            width: 110px;
-            height: 80px;
-            font-size: 40px;
-
-            margin-left: 10px;
-        }
-    }
+  
 
     .content {
 
@@ -258,4 +258,148 @@ p {
             margin: 0;
         }
     }
+}
+.mci-projects {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    position: relative;
+    .box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h3{
+            font-size: 22px;
+                font-weight: 500;
+                margin-bottom: 5px;
+    }
+    .desc{
+color: #a4a7b1;
+    font-size: 13px;
+        font-weight: 300;
+        
+    }
+    figure{
+        margin-block: 20px;
+    }
+    .tags{
+        span{
+            padding: 8px 12px;
+                background: rgba(255, 255, 255, 0.04);
+                margin-right: 5px;
+                font-size: 12px;
+        }
+    }
+        .project-item {
+            &.hide {
+                display: none;
+            }
+    
+            &.show {
+                animation: fadeIn 1s ease;
+    
+                @keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+    
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .filter-item{
+            color: #eee;
+                font-size: 13px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin: 8px 20px;
+                padding-bottom: 10px;
+                cursor: pointer;
+                position: relative;
+                &.active{
+                        color: #12c2e9;
+                }
+        }
+
+}
+.mci-skils{
+h2{
+    font-size: 60px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        
+}
+h3{
+    font-size: 25px;
+        line-height: 1.4;
+            font-weight: 500;
+            margin-bottom: 15px;
+}
+p{
+    color: #a4a7b1;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 2;
+        margin: 0;
+}
+.progress-container {
+  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 35px;
+  display: block;
+  .title{
+    position: absolute;
+    top: -30px;
+   
+  }
+}
+
+.progress-container, .progress {
+  background-color: #eee;
+  border-radius: 5px;
+  position: relative;
+  height: 7px;
+  width: 100%;
+}
+
+.progress {
+background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-stop(#c471ed), to(#f64f59));
+    background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+    background: -o-linear-gradient(left, #12c2e9, #c471ed, #f64f59);
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+  width: 0;
+  transition: width 0.4s linear;
+}
+
+.percentage {
+  background-color: #6F39B0;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 40px;
+  text-align: center;
+  transition: left 0.4s linear;
+}
+
+.percentage::after {
+  background-color: #6F39B0;
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
 }
