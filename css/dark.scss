@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
 
 body {
     color: #fff;
@@ -7,7 +7,41 @@ body {
     font-weight: 400;
     overflow-x: hidden !important;
     font-family: "Poppins", sans-serif;
+    transition: all 0.5s;
     
+}
+
+ #toggle {
+  position: relative;
+    height: 20px;
+    width: 40px;
+    background-color: #444;
+   
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+ #toggle .indicator {
+position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 3px;
+    left: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+ #toggle .change {
+    left: 22px;
+    background-color: #fff;
+}
+
+.dark-content {
+    color: #fff;
+    background-color: #080808;
 }
 
 h1,
@@ -80,6 +114,7 @@ p {
   }
 .navbar {
         transition: top 0.3s;
+        z-index: 9999;
     .navbar-nav {
         .nav-link {
             color: #ffffff;
@@ -101,7 +136,7 @@ p {
     padding: 100px 0;
     position: relative;
     overflow: hidden;
-    top: -100px;
+    top: -84px;
     display: inline-block;
 
     &::after {
@@ -445,6 +480,104 @@ background: #1D1E21;
                 color: #333 !important;
                 outline-offset: -4px;
                     outline: 2px solid #333;
+        }
+    }
+}
+footer{
+    background-color: #18191D;
+    padding: 100px 0;
+    .title{
+            line-height: 1.4;
+                font-weight: 500;
+                color: #fff;
+                font-size: 25px;
+                margin-bottom: 20px;
+    }
+    ul{
+        padding-left: 0;
+        li{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            
+            i{
+                    font-size: 30px;
+                        margin-right: 30px;
+                        width: 30px;
+                        text-align: center;
+            }
+            span{
+                strong{
+                    width: 100%;
+                    display: flex;
+                        font-size: 14px;
+                            font-weight: 600;
+                            color: #fff;
+                }
+                                color: #a4a7b1;
+                                font-size: 16px;
+                                font-weight: 300;
+                                line-height: 2;
+            }
+        }
+    }
+    .social-media{
+        a{
+            width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                font-size: 13px;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: #fff;
+                float: left;
+        }
+    }
+    .copyright{
+            font-size: 13px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #a4a7b1;
+                display: inline-block;
+             width: 100%;
+             margin-top: 30px;
+                
+                a{
+                    color: #12c2e9;
+                    text-decoration: none;
+                }
+    }
+
+    figure{
+            position: relative;
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                z-index: 2;
+       &:after {
+                content: "";
+                background: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                border-radius: 50%;
+                z-index: -1;
+            }
+        img{
+            object-fit: cover;
+                border-radius: 50%;
+                max-width: 100%;
+                height: 100%;
         }
     }
 }
