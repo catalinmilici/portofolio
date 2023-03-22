@@ -26,112 +26,116 @@ typingEffect();
 const filterContainer = document.querySelector(".project-filter"),
   Items = document.querySelectorAll(".project-item");
 if (filterContainer) {
-    filterContainer.addEventListener("click", (event) => {
-        if (event.target.classList.contains("filter-item")) {
-            filterContainer.querySelector(".active").classList.remove("active");
-            event.target.classList.add("active");
-            const filterValue = event.target.getAttribute("data-filter");
-            Items.forEach((item) => {
-                if (item.classList.contains(filterValue) || filterValue === 'all') {
-                    item.classList.remove("hide");
-                    item.classList.add("show");
-                }
-                else {
-                    item.classList.remove("show");
-                    item.classList.add("hide");
-                }
-            });
+  filterContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("filter-item")) {
+      filterContainer.querySelector(".active").classList.remove("active");
+      event.target.classList.add("active");
+      const filterValue = event.target.getAttribute("data-filter");
+      Items.forEach((item) => {
+        if (item.classList.contains(filterValue) || filterValue === "all") {
+          item.classList.remove("hide");
+          item.classList.add("show");
+        } else {
+          item.classList.remove("show");
+          item.classList.add("hide");
         }
-    });
+      });
+    }
+  });
 }
 
 //display fixed header after scroll x[px] height
-window.addEventListener('scroll', function () {
- 
-  
+window.addEventListener("scroll", function () {
   const height = document.querySelector(".mci-person .container").clientHeight;
   console.log(`height: ${height}`);
-   
+
   var header = document.querySelector(".navbar");
-        header.classList.toggle("animation", window.scrollY > height);
+  header.classList.toggle("animation", window.scrollY > height);
   header.classList.toggle("fixed-top", window.scrollY > height);
-  document.querySelector("body").classList.toggle("pt-5", window.scrollY > height);
-        
-    }
-)
+  document
+    .querySelector("body")
+    .classList.toggle("pt-5", window.scrollY > height);
+});
 
 //hide menu on scroll down
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".navbar").style.top = "0";
-    } else {
-        document.querySelector(".navbar").style.top = "-105px";
-    }
-    prevScrollpos = currentScrollPos;
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".navbar").style.top = "0";
+  } else {
+    document.querySelector(".navbar").style.top = "-105px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+
+// change theme style by cookies
+
+//cookies logic
+function setCookie(key, value, expiry) {
+  var expires = new Date();
+  expires.setTime(expires.getTime() + expiry * 24 * 60 * 60 * 1000);
+  document.cookie = key + "=" + value + ";expires=" + expires.toUTCString();
 }
 
+function getCookie(key) {
+  var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+  return keyValue ? keyValue[2] : null;
+}
 
-// change theme style
+function eraseCookie(key) {
+  var keyValue = getCookie(key);
+  setCookie(key, keyValue, "-1");
+}
 
-
-
-
-  function setCookie(key, value, expiry) {
-    var expires = new Date();
-    expires.setTime(expires.getTime() + expiry * 24 * 60 * 60 * 1000);
-    document.cookie = key + "=" + value + ";expires=" + expires.toUTCString();
-  }
-
-  function getCookie(key) {
-    var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
-    return keyValue ? keyValue[2] : null;
-  }
-
-  function eraseCookie(key) {
-    var keyValue = getCookie(key);
-    setCookie(key, keyValue, "-1");
-  }
-
+// toogle to change dark/light mode
 function toggleTheme() {
   var theme = document.getElementsByTagName("link")[1];
   const indicator = document.querySelector(".indicator");
   indicator.classList.toggle("change");
-  if (theme.getAttribute("href") == "/css/dark.css") {
-    theme.setAttribute("href", "/css/light.css");
-       setCookie("dark", "1", "-1");
-       setCookie("light", "1", "7");
-  } else {
+  if (theme.getAttribute("href") == "/css/light.css") {
     theme.setAttribute("href", "/css/dark.css");
-
-     setCookie("light", "1", "-1");
-     setCookie("dark", "0", "7");
+    setCookie("light", "1", "-1");
+    setCookie("dark", "0", "7");
+  } else {
+    theme.setAttribute("href", "/css/light.css");
+    setCookie("dark", "1", "-1");
+    setCookie("light", "1", "7");
   }
 }
+
+// toogle to change dark/light mode auto without set a cookies
 function toggleThemeNoCookies() {
   var theme = document.getElementsByTagName("link")[1];
-   if (theme.getAttribute("href") == "/css/dark.css") {
-    theme.setAttribute("href", "/css/light.css");
-   
-  } else {
+  if (theme.getAttribute("href") == "/css/light.css") {
     theme.setAttribute("href", "/css/dark.css");
-    
+  } else {
+    theme.setAttribute("href", "/css/light.css");
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
+  var theme = document.getElementsByTagName("link")[1];
   var darkMode = getCookie("dark");
   var lightMode = getCookie("light");
+
+  // verify is set a cookies
   if (darkMode === null && lightMode === null) {
     console.log("darkmode", darkMode);
     console.log("lightmode", lightMode);
     const hours = new Date().getHours();
-    const isDayTime = hours > 6 && hours < 24;
-
-    if (isDayTime) {
+    const isDayTime = hours > 6 && hours < 20;
+    console.log(isDayTime);
+    if (isDayTime == false) {
       toggleThemeNoCookies();
     }
-  } else {
-    alert;
+  }
+
+  // set link to style depending which cookie is set
+  if (darkMode) {
+    theme.setAttribute("href", "/css/dark.css");
+  }
+  if (lightMode) {
+    theme.setAttribute("href", "/css/light.css");
   }
 });
+
