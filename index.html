@@ -12,14 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Title Project</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand text-dark" href="#">MCI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <a class="navbar-brand text-dark order-lg-0 order-1" href="#">MCI</a>
+            <button class="navbar-toggler order-lg-1 order-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
             <div class="hamburger-lines">
@@ -27,8 +28,10 @@
                 <span class="line line2"></span>
                 <span class="line line3"></span>
             </div>
+            
             </button>
-            <div class="collapse navbar-collapse d-xl-flex justify-content-end" id="navbarSupportedContent">
+            <div onclick="toggleTheme()" id="toggle" class="order-lg-3 order-0"> <span class="indicator"></span> </div>
+            <div class="collapse navbar-collapse d-xl-flex justify-content-end order-lg-2 order-4" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">About me</a>
@@ -47,20 +50,20 @@
                     </li>
                 </ul>
             </div>
-            <div onclick="toggleTheme()" id="toggle" class="d-none"> <span class="indicator"></span> </div>
+            
         </div>
-      
+   
     </nav>
   
     <header class="mci-person d-flex align-items-center justify-content-center flex-column">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 col-12">
+                <div data-aos="fade-right" class="col-lg-4 col-12">
                     <figure class="t mx-auto mx-lg-0 my-3">
                         <img class="img-fluid" src="/images/hero.jpg" alt="">
                     </figure>
                 </div>
-                <div class="col-lg-8 col-12">
+                <div data-aos="fade-left" class="col-lg-8 col-12">
                     <h1>Hello, My name is Catalin i love design and i hope to make awesome designs and also i create a
                         <span id="word"></span>|</h1>
                 </div>
@@ -125,7 +128,7 @@
                     </div>
                 </div>
                     <div class="row">
-                        <div class="col-md-6 col-12">
+                        <div data-aos="fade-up-right" class="col-md-6 col-12">
                             <article class="box">
                                 <div class="icon linearGradientText">
                                     <i class="fa-solid fa-tv"></i>
@@ -136,7 +139,7 @@
                                 </div>
                             </article>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div data-aos="fade-up-left" class="col-md-6 col-12">
                             <article class="box">
                                 <div class="icon linearGradientText">
                                     <i class="fa-solid fa-tv"></i>
@@ -147,7 +150,7 @@
                                 </div>
                             </article>
                         </div>
-                        <div class="col-md-6 col-12 col-12">
+                        <div data-aos="fade-up-right" class="col-md-6 col-12 col-12">
                             <article class="box">
                                 <div class="icon linearGradientText">
                                     <i class="fa-solid fa-tv"></i>
@@ -158,7 +161,7 @@
                                 </div>
                             </article>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div data-aos="fade-up-left" class="col-md-6 col-12">
                             <article class="box">
                                 <div class="icon linearGradientText">
                                     <i class="fa-solid fa-tv"></i>
@@ -185,7 +188,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div data-aos="zoom-in" class="col-12">
                         <ul class="nav project-filter">
                             <li class="filter-item active" data-filter="all">
                         
@@ -226,7 +229,7 @@
                         </ul>
                     </div>
                 <div class="row">
-                <div class="col-md-6 project-item marketing">
+                <div data-aos="zoom-in-right" class="col-md-6 project-item marketing">
                         <article class="box">
                             <h3>Creative Mobile App</h3>
                             <p class="desc">Ui / Ux creative mobile app design</p>
@@ -244,7 +247,7 @@
                             </div>
                         </article>
                 </div>
-                <div class="col-md-6 project-itemmarketing">
+                <div data-aos="zoom-in-left" class="col-md-6 project-itemmarketing">
                     <article class="box">
                         <h3>Creative Mobile App</h3>
                         <p class="desc">Ui / Ux creative mobile app design</p>
@@ -262,7 +265,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-md-6 project-item seo">
+                <div data-aos="zoom-in-right" class="col-md-6 project-item seo">
                     <article class="box">
                         <h3>Creative Mobile App</h3>
                         <p class="desc">Ui / Ux creative mobile app design</p>
@@ -280,7 +283,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-md-6 project-item webdesign">
+                <div data-aos="zoom-in-left" class="col-md-6 project-item webdesign">
                     <article class="box">
                         <h3>Creative Mobile App</h3>
                         <p class="desc">Ui / Ux creative mobile app design</p>
@@ -298,7 +301,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-md-6 project-item promovare">
+                <div data-aos="zoom-in-right" class="col-md-6 project-item promovare">
                     <article class="box">
                         <h3>Creative Mobile App</h3>
                         <p class="desc">Ui / Ux creative mobile app design</p>
@@ -316,7 +319,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-md-6 project-item seo">
+                <div data-aos="zoom-in-left" class="col-md-6 project-item seo">
                     <article class="box">
                         <h3>Creative Mobile App</h3>
                         <p class="desc">Ui / Ux creative mobile app design</p>
@@ -339,12 +342,12 @@
         </section>
         <section class="mci-skils">
             <div class="row">
-                <div class="col-lg-6 col-12">
+                <div data-aos="fade-right" class="col-lg-6 col-12">
                     <figure>
                         <img src="/images/ux.jpg" class="img-fluid" />
                     </figure>
                 </div>
-                <div class="col-lg-6 col-12 justify-content-center d-flex flex-column px-5">
+                <div data-aos="fade-left" class="col-lg-6 col-12 justify-content-center d-flex flex-column px-5">
                     <h2 class="linearGradientText">UI / UX Designer</h2>
                     <h3>We help to create visual strategies.</h3>
                     <p>We are Vie. We create award-winning websites, remarkable brands and cutting-edge apps.Nullam imperdie.</p>
@@ -370,7 +373,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact-form">
+        <section  class="contact-form">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
@@ -381,7 +384,7 @@
                         </div>
                     </div>
                 </div>
-            <form>
+            <form data-aos="flip-up">
                 <div class="row">
                 <div class="mb-3 col-md-6">
                     <input type="text" class="form-control" id="InputText" aria-describedby="Name" placeholder="Name">
@@ -456,11 +459,14 @@
             </div>
         
     </footer>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
-        integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
+        integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script src="/js/script.js"></script>
-
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
