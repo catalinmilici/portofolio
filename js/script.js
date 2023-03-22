@@ -74,21 +74,64 @@ window.onscroll = function () {
 
 
 // change theme style
-function toggleTheme() {
 
+
+
+
+  function setCookie(key, value, expiry) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + expiry * 24 * 60 * 60 * 1000);
+    document.cookie = key + "=" + value + ";expires=" + expires.toUTCString();
+  }
+
+  function getCookie(key) {
+    var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+    return keyValue ? keyValue[2] : null;
+  }
+
+  function eraseCookie(key) {
+    var keyValue = getCookie(key);
+    setCookie(key, keyValue, "-1");
+  }
+
+function toggleTheme() {
   var theme = document.getElementsByTagName("link")[1];
   const indicator = document.querySelector(".indicator");
   indicator.classList.toggle("change");
-  if (theme.getAttribute("href") == "/css/light.css") {
-    theme.setAttribute("href", "/css/dark.css");
-  } else {
+  if (theme.getAttribute("href") == "/css/dark.css") {
     theme.setAttribute("href", "/css/light.css");
+       setCookie("dark", "1", "-1");
+       setCookie("light", "1", "7");
+  } else {
+    theme.setAttribute("href", "/css/dark.css");
+
+     setCookie("light", "1", "-1");
+     setCookie("dark", "0", "7");
   }
 }
-
-const hours = new Date().getHours();
-const isDayTime = hours > 6 && hours < 18;
-
-if (isDayTime) {
-  toggleTheme(); 
+function toggleThemeNoCookies() {
+  var theme = document.getElementsByTagName("link")[1];
+   if (theme.getAttribute("href") == "/css/dark.css") {
+    theme.setAttribute("href", "/css/light.css");
+   
+  } else {
+    theme.setAttribute("href", "/css/dark.css");
+    
+  }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  var darkMode = getCookie("dark");
+  var lightMode = getCookie("light");
+  if (darkMode === null && lightMode === null) {
+    console.log("darkmode", darkMode);
+    console.log("lightmode", lightMode);
+    const hours = new Date().getHours();
+    const isDayTime = hours > 6 && hours < 24;
+
+    if (isDayTime) {
+      toggleThemeNoCookies();
+    }
+  } else {
+    alert;
+  }
+});
