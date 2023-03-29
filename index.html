@@ -33,20 +33,18 @@
             <div onclick="toggleTheme()" id="toggle" class="order-lg-3 order-0"> <span class="indicator"></span> </div>
             <div class="collapse navbar-collapse d-xl-flex justify-content-end order-lg-2 order-4" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">About me</a>
+                        <a class="nav-link" href="#what-i-do">What I Do</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">What I Do</a>
+                        <a class="nav-link" href="#portofoliu">Portofolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="#skils">Skils</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portofolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -116,7 +114,7 @@
     <main>
        
         
-        <section class="mci-services">
+        <section id="what-i-do" class="mci-services">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
@@ -176,7 +174,7 @@
                 </div>
                 <div class="line bottom-0 end-0"></div>
         </section>
-        <section class="mci-projects">
+        <section id="portofoliu" class="mci-projects">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
@@ -340,7 +338,7 @@
                 </div>
             </div>
         </section>
-        <section class="mci-skils">
+        <section id="skils" class="mci-skils">
             <div class="row">
                 <div data-aos="fade-right" class="col-lg-6 col-12">
                     <figure>
@@ -355,17 +353,17 @@
                     <div class="skill-progress-bar">
                         <div class="progress-container" data-percentage='70'>
                             <div class="title">UX</div>
-                            <div class="progress" style="width: 70%;"></div>
+                            <div class="progress" style="max-width: 70%;"></div>
                             <div class="percentage" style="left: 70%">70%</div>
                         </div>
                         <div class="progress-container" data-percentage='90'>
                             <div class="title">UX</div>
-                            <div class="progress" style="width: 90%;"></div>
+                            <div class="progress" style="max-width: 90%;"></div>
                             <div class="percentage" style="left: 90%">90%</div>
                         </div>
                         <div class="progress-container" data-percentage='89'>
                             <div class="title">UX</div>
-                            <div class="progress" style="width: 89%;"></div>
+                            <div class="progress" style="max-width: 89%;"></div>
                             <div class="percentage" style="left: 89%">89%</div>
                         </div>
                         </div>
@@ -373,7 +371,7 @@
                 </div>
             </div>
         </section>
-        <section  class="contact-form">
+        <section id="contact" class="contact-form">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
@@ -384,16 +382,16 @@
                         </div>
                     </div>
                 </div>
-            <form data-aos="flip-up">
+            <form data-aos="flip-up" action="" method="post">
                 <div class="row">
                 <div class="mb-3 col-md-6">
-                    <input type="text" class="form-control" id="InputText" aria-describedby="Name" placeholder="Name">
+                    <input type="text" name="name" class="form-control" id="InputText" aria-describedby="Name" placeholder="Name">
                 </div>
                 <div class="mb-3 col-md-6">
-                    <input type="email" class="form-control" id="InputEmail" aria-describedby="Email" placeholder="Email">
+                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="Email" placeholder="Email">
                 </div>
             <div class="mb-3 col-md-12">
-                <textarea class="form-control" id="FormControlTextarea" rows="4" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" id="FormControlTextarea" rows="4" placeholder="Message"></textarea>
             </div>
             </div>
             <div class="col-md-12 text-center mt-5">
@@ -402,6 +400,11 @@
             </form>
             </div>
         </section>
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
     </main>
     <footer class="px-3">
         <div class="container">
@@ -459,9 +462,9 @@
             </div>
         
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.js"
-        integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script src="/js/script.js"></script>
     <script>
