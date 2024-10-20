@@ -193,7 +193,7 @@ p {
     }
 }
 
-.mci-person {
+.cm-person {
     min-height: 100vh;
     padding: 100px 0;
     position: relative;
@@ -338,7 +338,7 @@ p {
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
 }
 
-.mci-services {
+.cm-services {
     padding-top: 80px;
     padding-bottom: 120px;
     position: relative;
@@ -362,7 +362,7 @@ p {
         }
     }
 }
-.mci-projects {
+.cm-projects {
     padding-top: 80px;
     padding-bottom: 120px;
     position: relative;
@@ -426,7 +426,14 @@ color: #a4a7b1;
         }
 
 }
-.mci-skils{
+.cm-skils {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
 h2{
     font-size: 60px;
         font-weight: 600;
@@ -482,7 +489,7 @@ background: -webkit-gradient(linear, left top, right top, from(#12c2e9), color-s
 .percentage {
 background: #1D1E21;
   border-radius: 5px;
-  box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
+box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   color: #fff;
   font-size: 12px;
   padding: 4px;
@@ -761,7 +768,7 @@ footer{
         }
     }
 
-    .mci-person {
+                .cm-person {
         min-height: auto;
         padding: 20px 0;
         position: relative;
@@ -788,7 +795,7 @@ footer{
         }
     }
 
-    .mci-services {
+                .cm-services {
         .box {
             padding: 6% 10%;
             text-align: center;

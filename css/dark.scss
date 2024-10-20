@@ -212,7 +212,7 @@ p {
     }
 }
 
-.mci-person {
+.cm-person {
     min-height: 100vh;
     padding: 100px 0;
     position: relative;
@@ -357,7 +357,7 @@ p {
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
 }
 
-.mci-services {
+.cm-services {
     padding-top: 80px;
     padding-bottom: 120px;
     position: relative;
@@ -382,7 +382,7 @@ p {
     }
 }
 
-.mci-projects {
+.cm-projects {
     padding-top: 80px;
     padding-bottom: 120px;
     position: relative;
@@ -455,7 +455,7 @@ p {
 
 }
 
-.mci-skils {
+.cm-skils {
     --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 0;
         width: 100%;
@@ -487,7 +487,7 @@ p {
     }
 
     .progress-container {
-        box-shadow: 0 4px 5px rgb(0, 0, 0, 0.1);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
         position: relative;
         margin-top: 50px;
         margin-bottom: 20px;
@@ -524,7 +524,7 @@ p {
     .percentage {
         background: #1D1E21;
         border-radius: 5px;
-        box-shadow: 0 4px 5px rgb(0, 0, 0, 0.2);
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
         color: #fff;
         font-size: 12px;
         padding: 4px;
@@ -815,7 +815,7 @@ footer {
             background-image: none;
         }
     }
-        .mci-person{
+                                                                                                                                .cm-person {
                 min-height: auto;
                     padding: 20px 0;
                     position: relative;
@@ -838,7 +838,7 @@ footer {
             }
         }
     }
-        .mci-services{
+                                                                                                                                .cm-services {
             .box{
                 padding: 6% 10%;
                 text-align: center;

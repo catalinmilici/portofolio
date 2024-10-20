@@ -46,7 +46,7 @@ if (filterContainer) {
 
 //display fixed header after scroll x[px] height
 window.addEventListener("scroll", function () {
-  const height = document.querySelector(".mci-person .container").clientHeight;
+  const height = document.querySelector(".cm-person .container").clientHeight;
   console.log(`height: ${height}`);
 
   var header = document.querySelector(".navbar");
